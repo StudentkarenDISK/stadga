@@ -1,0 +1,70 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+\documentclass[10pt]{article}
+\usepackage{fix-cm}
+\usepackage{color}
+\usepackage{enumerate}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{charter}
+\usepackage{multicol}
+\usepackage{hyperref}
+\geometry{a4paper}
+\setcounter{tocdepth}{2}
+\renewcommand{\abstractname}{Beskrivning}
+\renewcommand{\contentsname}{Innehållsförteckning}
+\parindent 0pt
+\graphicspath{{images/}}
+
+\makeatletter
+
+\hypersetup{
+	colorlinks,
+	linktocpage,
+	citecolor=black,
+	filecolor=black,
+	linkcolor=black,
+	urlcolor=black
+}
+
+\renewcommand\tableofcontents{
+	\section*{\contentsname}
+	\begin{list}{}{
+			\setlength\leftskip{0.15\textwidth}
+			\setlength\rightskip{0.15\textwidth}
+			\scriptsize
+		}
+		\item[]
+		\begin{multicols*}{2}
+			\parskip=0pt
+			\@starttoc{toc}%
+		\end{multicols*}
+	\end{list}
+}
+\makeatother
+
+\begin{document}
+\input{chapters/titlepage}
+\thispagestyle{empty}
+\tableofcontents
+
+\input{chapters/allmannabestammelser}
+\input{chapters/medlemskap}
+\input{chapters/seniorskollegium}
+\input{chapters/hedersbetygelserochmedaljer}
+\input{chapters/marskalksambete}
+\input{chapters/inspektor}
+\input{chapters/arsmote}
+\input{chapters/valberedning}
+\input{chapters/styrelsen}
+\input{chapters/protokollocharsberattelse}
+\input{chapters/sektioner}
+\input{chapters/ekonomi}
+\input{chapters/revision}
+\input{chapters/stadgeandringtolkningochoverklagande}
+\input{chapters/disksupplosande}
+
+\end{document}
